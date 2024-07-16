@@ -1,3 +1,14 @@
+
 .contactList {
-    margin: 10px 0;
-}
+    display: flex;
+    gap: 10px;
+    
+  }
+  
+  /* Додаємо новий стиль для обгортки контакту */
+  .contactItem {
+    border: 1px solid rgb(46, 36, 36);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  

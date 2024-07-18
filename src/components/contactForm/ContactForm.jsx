@@ -28,8 +28,8 @@ export default function ContactForm({ contacts, setContacts }) {
           id: idGenerator
         };
 
-        setContacts(prevContacts => [
-          ...prevContacts,
+        setContacts([
+          ...contacts,
           newContact
         ]);
 

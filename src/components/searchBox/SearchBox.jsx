@@ -5,7 +5,7 @@ import style from "./searchBox.module.css";
 export default function SearchBox({ onSearch }) {
     const formik = useFormik({
         initialValues: {
-            searchContact: ''
+            searchContact: localStorage.getItem('name') ?? ""
         },
         onSubmit: values => {
             console.log('Form data', values);

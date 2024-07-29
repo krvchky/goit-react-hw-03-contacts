@@ -42,7 +42,13 @@ export default function App() {
     };
 
     // Функція добавлення контакту
-    const addContact = (newContacts) => {
+    const onAdd = (newContact) => {        
+
+        const newContacts = [
+            ...contacts,
+            newContact
+        ]
+
         setContacts(newContacts);
         setFilteredContacts(newContacts); // Оновлюємо відфільтровані контакти
         localStorage.setItem("contacts", JSON.stringify(newContacts))
@@ -58,7 +64,7 @@ export default function App() {
     return (
         <div className={style.container}>
             <h1>Phonebook</h1>
-            <ContactForm contacts={contacts} setContacts={addContact} />
+            <ContactForm onAdd={onAdd} />
             <SearchBox onSearch={searchContacts} />
             <ContactList contacts={filteredContacts} onDelete={deleteContact} />
         </div>
